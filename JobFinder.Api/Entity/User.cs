@@ -11,5 +11,7 @@ public class User : BaseEntity
     public bool IsActive { get; set; } = true;
     public int RoleId { get; set; }
     public Role Role { get; set; } = null!;
+    public Company Company { get; set; } = null!;
+    public Resume? Resume { get; set; }
 }
 
