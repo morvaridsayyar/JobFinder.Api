@@ -13,5 +13,6 @@ public class User : BaseEntity
     public Role Role { get; set; } = null!;
     public Company Company { get; set; } = null!;
     public Resume? Resume { get; set; }
+    public List<JobApplication> JobApplications { get; set; } = null!;
 }
 

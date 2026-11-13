@@ -10,4 +10,5 @@ public class Company : BaseEntity
     public string PhoneNumber { get; set; } = null!;
     public int UserId { get; set; }
     public User User { get; set; } = null!;
+    public List<Job> Jobs { get; set; } = null!;
 }

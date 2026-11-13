@@ -1,6 +1,6 @@
 ﻿namespace JobFinder.Api.Entity;
 
-public class Role :BaseEntity
+public class Role : BaseEntity
 {
     public string Title { get; set; } = null!;
     public string Description { get; set; } = null!;

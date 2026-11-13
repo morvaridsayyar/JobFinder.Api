@@ -12,4 +12,5 @@ public class Job : BaseEntity
     public int JobCategoryId { get; set; }
     public JobCategory JobCategory { get; set;} = null!;
     public List<JobSkill> JobSkills { get; set; } = null!;
+    public List<JobApplication> JobApplications { get; set; } = null!;
 }
