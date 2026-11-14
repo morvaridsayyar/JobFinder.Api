@@ -32,7 +32,7 @@ public class CompanyEntityConfiguration : IEntityTypeConfiguration<Company>
 
         builder.HasOne(x => x.User)
             .WithOne(x => x.Company)
-            .HasForeignKey(x => x.UserId);
+            .HasForeignKey<Company>(x => x.UserId);
     }
 }
 

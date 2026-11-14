@@ -21,14 +21,14 @@ public class UserEntityConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(x => x.NationalCode)
             .IsRequired()
-            .HasMaxLength(10)
-            .HasIndex()
+            .HasMaxLength(10);
+        builder.HasIndex(x => x.NationalCode)
             .IsUnique();
 
         builder.Property(x => x.Email)
             .IsRequired()
-            .HasMaxLength(100)
-            .HasIndex()
+            .HasMaxLength(100);
+        builder.HasIndex(x => x.Email)
             .IsUnique();
 
         builder.Property(x => x.PhoneNumber)

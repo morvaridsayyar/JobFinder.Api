@@ -17,11 +17,11 @@ public class JobApplicationEntityConfiguration : IEntityTypeConfiguration<JobApp
             .IsRequired();
 
         builder.HasOne(x => x.User)
-            .WithMany   (x => x.JobApplication)
+            .WithMany(x => x.JobApplications)
             .HasForeignKey(x => x.UserId);
 
         builder.HasOne(x => x.Job)
-            .WithMany(x => x.JobApplication)
+            .WithMany(x => x.JobApplications)
             .HasForeignKey(x => x.JobId);
     }
 }

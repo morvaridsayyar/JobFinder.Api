@@ -16,6 +16,6 @@ public class ResumeEntityConfiguration : IEntityTypeConfiguration<Resume>
 
         builder.HasOne(x => x.User)
             .WithOne(x => x.Resume)
-            .HasForeignKey(x => x.UserId);
+            .HasForeignKey<Resume>(x => x.UserId);
     }
 }

@@ -11,11 +11,11 @@ public class JobSkillEntityConfiguration : IEntityTypeConfiguration<JobSkill>
         builder.ToTable("JobSkills");
 
         builder.HasOne(x => x.Job)
-            .WithMany(x => x.JobSkill)
+            .WithMany(x => x.JobSkills)
             .HasForeignKey(x => x.JobId);
 
         builder.HasOne(x => x.Skill)
-            .WithMany(x => x.JobSkill)
+            .WithMany(x => x.JobSkills)
             .HasForeignKey(x => x.SkillId);
     }
 }
